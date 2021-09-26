@@ -1,5 +1,5 @@
 class Library
-  def self.translate
+  def self.char_hash
     {
       'a' => ['0.', '..', '..'],
       'b' => ['0.', '0.', '..'],
