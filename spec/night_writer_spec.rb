@@ -1,4 +1,5 @@
 require './lib/night_writer'
+ require './lib/library'
  
 RSpec.describe NightWriter do
   before(:each) do

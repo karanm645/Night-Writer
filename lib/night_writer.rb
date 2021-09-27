@@ -24,7 +24,7 @@ class NightWriter
     File.open(output_file, "w") do |file|
       file.write(message)
     end
-    puts "Created #{output_file} containing #{message.size} characters"
+    puts "Created #{output_file} containing #{input_file.size} characters"
   end
 
 end
