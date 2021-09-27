@@ -1,4 +1,10 @@
 class Library
+  attr_reader :char_hash
+
+  def initialize
+    @char_hash = char_hash
+  end
+
   def self.char_hash
     {
       'a' => ['0.', '..', '..'],
@@ -28,5 +34,9 @@ class Library
       'y' => ['00', '.0', '00'],
       'z' => ['0.', '.0', '00'],
     }
+  end
+
+  def self.find_value(letter)
+    char_hash[letter]
   end
 end
