@@ -12,7 +12,13 @@ class ConvertToBraille
         array << change(character)
       end
     end
-    array.compact.flatten
+    x = array.compact.transpose
+    x.map { | row | row.join(' ')}.join("\n")
+    # first_row = []
+  end
+
+  def self.first_row(convert)
+    input_file
   end
 
   def self.change(letter)
