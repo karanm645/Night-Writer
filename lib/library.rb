@@ -1,8 +1,10 @@
 class Library
-  attr_reader :char_hash
+  attr_reader :char_hash,
+              :braille_hash
 
   def initialize
     @char_hash = char_hash
+    @braille_hash = braille_hash
   end
 
   def char_hash
@@ -69,5 +71,9 @@ class Library
 
   def find_value(letter)
     char_hash[letter]
+  end
+
+  def find_letter_value(letter)
+    braille_hash[letter]
   end
 end
