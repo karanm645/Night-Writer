@@ -8,6 +8,7 @@ class NightWriter
   def initialize()
     @input_file = ARGV[0]
     @output_file = ARGV[1]
+    @ctb = ConvertToBraille.new
     @character_hash = Library.new.char_hash
   end
 
@@ -16,7 +17,7 @@ class NightWriter
   end
 
   def convert_message
-    ConvertToBraille.convert(read)
+    @ctb.convert(read)
   end
 
   def read_and_write
@@ -26,7 +27,6 @@ class NightWriter
     end
     puts "Created #{output_file} containing #{input_file.size} characters"
   end
-
 end
 # NightWriter.new.read
 NightWriter.new.read_and_write
